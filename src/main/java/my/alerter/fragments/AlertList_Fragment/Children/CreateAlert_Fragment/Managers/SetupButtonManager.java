@@ -1,10 +1,10 @@
-package my.alerter.fragments.one.Managers.SetupButtonManager;
+package my.alerter.fragments.AlertList_Fragment.Children.CreateAlert_Fragment.Managers;
 
 import android.forms.BaseActivity.BaseActivity;
 import android.forms.Fragments.BaseFragment;
 import android.forms.Fragments.Managers.FragmentManager;
 
-import my.alerter.fragments.one.Managers.SetupButtonManager.Workers.SetupFabBtn;
+import my.alerter.fragments.AlertList_Fragment.Children.CreateAlert_Fragment.Managers.Workers.SetupFabBtn;
 
 /**
  * @author Elliott Marshall

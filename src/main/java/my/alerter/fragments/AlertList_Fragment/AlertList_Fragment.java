@@ -1,29 +1,28 @@
-package my.alerter.fragments.three;
+package my.alerter.fragments.AlertList_Fragment;
 
 import android.forms.BaseActivity.BaseActivity;
 import android.forms.BaseActivity.Managers.ButtonActivityManager;
 import android.forms.BaseActivity.Managers.ToolBarActivityManager;
-import android.forms.Fragments.BaseFragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import my.alerter.MyFragmentActivityManager;
-import my.alerter.fragments.three.Managers.SetupLoading;
 import my.alerter.R;
+import my.alerter.fragments.AlertFragment;
+import my.alerter.fragments.AlertList_Fragment.Managers.PreLoadManager;
 
 /**
  * @author Elliott Marshall
  */
-public class Fragment3<A extends BaseActivity> extends BaseFragment<A> {
-    public final static String KEY = "ExercisesFragment";
+public class AlertList_Fragment<A extends BaseActivity> extends AlertFragment<A> {
+    public final static String KEY = "AlertList_Fragment";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreLoadManager(new SetupLoading(this, getMyActivity()));
+        addPreLoadManager(new PreLoadManager(this, getMyActivity()));
         //addPostManager();
     }
 
@@ -37,20 +36,16 @@ public class Fragment3<A extends BaseActivity> extends BaseFragment<A> {
     protected void loadSettings() {
         ButtonActivityManager bam = (ButtonActivityManager) getMyActivity().getActivityManager(BaseActivity.BUTTON_MANAGER);
         ToolBarActivityManager tbm = (ToolBarActivityManager) getMyActivity().getActivityManager(BaseActivity.TOOLBAR_MANAGER);
-        bam.enableFabBtn(false);
-        tbm.selectNavPosition(2);
+        bam.enableFabBtn(true);
+        tbm.selectNavPosition(1);
         tbm.lockNavDraw(false);
-        tbm.setTitle("Fragment 3");
-        setHasOptionsMenu(false);
+        tbm.setBackButton(false);
+        tbm.setTitle("Alerts");
+        setHasOptionsMenu(true);
     }
 
     @Override
     public int getParent() {
-        return MyFragmentActivityManager.FRAGMENT1;
-    }
-
-    @Override
-    protected String getAdmobID() {
-        return "123456789";
+        return -1;
     }
 }

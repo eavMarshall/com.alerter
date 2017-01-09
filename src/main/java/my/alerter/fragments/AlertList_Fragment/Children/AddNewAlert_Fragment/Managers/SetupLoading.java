@@ -1,11 +1,11 @@
-package my.alerter.fragments.three.Managers;
+package my.alerter.fragments.AlertList_Fragment.Children.AddNewAlert_Fragment.Managers;
 
 import android.forms.BaseActivity.BaseActivity;
 import android.forms.Fragments.BaseFragment;
 import android.forms.Fragments.Managers.FragmentManager;
 
-import my.alerter.fragments.three.Managers.Workers.PauseWorker;
-import my.alerter.fragments.three.Managers.Workers.SetLoadingLayouts;
+import my.alerter.fragments.AlertList_Fragment.Children.AddNewAlert_Fragment.Managers.Workers.PauseWorker;
+import my.alerter.fragments.AlertList_Fragment.Children.AddNewAlert_Fragment.Managers.Workers.SetLoadingLayouts;
 
 /**
  * @author Elliott Marshall

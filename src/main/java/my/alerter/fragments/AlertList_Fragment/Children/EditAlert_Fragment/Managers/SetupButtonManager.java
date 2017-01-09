@@ -1,11 +1,11 @@
-package my.alerter.fragments.two.Managers.SetupButtonManager;
+package my.alerter.fragments.AlertList_Fragment.Children.EditAlert_Fragment.Managers;
 
 import android.forms.BaseActivity.BaseActivity;
 import android.forms.Fragments.BaseFragment;
 import android.forms.Fragments.Managers.FragmentManager;
 
-import my.alerter.fragments.one.Managers.SetupButtonManager.Workers.SetupFabBtn;
-import my.alerter.fragments.two.Managers.SetupButtonManager.Workers.SetupSearchEditText;
+import my.alerter.fragments.AlertList_Fragment.Children.CreateAlert_Fragment.Managers.Workers.SetupFabBtn;
+import my.alerter.fragments.AlertList_Fragment.Children.EditAlert_Fragment.Managers.Workers.SetupSearchEditText;
 
 /**
  * @author Elliott Marshall

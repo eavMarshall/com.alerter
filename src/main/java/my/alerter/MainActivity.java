@@ -5,7 +5,6 @@ import android.forms.BaseActivity.Managers.FragmentActivityManager;
 import android.support.design.widget.NavigationView;
 import android.view.LayoutInflater;
 import android.view.View;
-import my.alerter.R;
 
 public class MainActivity extends BaseActivity {
     @Override public String getDataBaseName() { return getString(R.string.DATABASE_NAME); }
@@ -28,6 +27,6 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onFinishLoadManagers() {
         FragmentActivityManager fam = (FragmentActivityManager) getActivityManager(FRAGMENT_MANAGER);
-        fam.changeFragmentTo(MyFragmentActivityManager.FRAGMENT1);
+        fam.changeFragmentTo(MyFragmentActivityManager.LIST);
     }
 }
