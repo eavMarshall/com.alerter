@@ -7,6 +7,7 @@ import alerter.fragments.AlertList_Fragment.AlertList_Fragment;
 import alerter.fragments.AlertList_Fragment.Children.CreateAlert_Fragment.CreateAlert_Fragment;
 import alerter.fragments.AlertList_Fragment.Children.AddNewAlert_Fragment.AddNew_Fragment;
 import alerter.fragments.AlertList_Fragment.Children.EditAlert_Fragment.EditAlert_Fragment;
+import alerter.fragments.Setting_Fragment.Setting_Fragment;
 
 /**
  * @author Elliott Marshall
@@ -17,7 +18,8 @@ public class MyFragmentActivityManager<A extends BaseActivity> extends FragmentA
             CREATE = 0,
             EDIT = 1,
             ADD = 2,
-            LIST = 3;
+            LIST = 3,
+            SETTING = 4;
 
     public MyFragmentActivityManager(A mainActivity) {
         super(mainActivity);
@@ -30,6 +32,7 @@ public class MyFragmentActivityManager<A extends BaseActivity> extends FragmentA
             case EDIT: changeFragment(EditAlert_Fragment.class, EditAlert_Fragment.KEY); break;
             case ADD: changeFragment(AddNew_Fragment.class, AddNew_Fragment.KEY); break;
             case LIST: changeFragment(AlertList_Fragment.class, AlertList_Fragment.KEY); break;
+            case SETTING: changeFragment(Setting_Fragment.class, Setting_Fragment.KEY); break;
         }
     }
 
@@ -40,6 +43,7 @@ public class MyFragmentActivityManager<A extends BaseActivity> extends FragmentA
             case EDIT: changeFragmentWithBackAnimation(EditAlert_Fragment.class, EditAlert_Fragment.KEY); break;
             case ADD: changeFragmentWithBackAnimation(AddNew_Fragment.class, AddNew_Fragment.KEY); break;
             case LIST: changeFragmentWithBackAnimation(AlertList_Fragment.class, AlertList_Fragment.KEY); break;
+            case SETTING: changeFragmentWithBackAnimation(Setting_Fragment.class, Setting_Fragment.KEY); break;
         }
     }
 
@@ -50,6 +54,7 @@ public class MyFragmentActivityManager<A extends BaseActivity> extends FragmentA
             case EDIT: changeFragmentWithForwardAnimation(EditAlert_Fragment.class, EditAlert_Fragment.KEY); break;
             case ADD: changeFragmentWithForwardAnimation(AddNew_Fragment.class, AddNew_Fragment.KEY); break;
             case LIST: changeFragmentWithForwardAnimation(AlertList_Fragment.class, AlertList_Fragment.KEY); break;
+            case SETTING: changeFragmentWithForwardAnimation(Setting_Fragment.class, Setting_Fragment.KEY); break;
         }
     }
 

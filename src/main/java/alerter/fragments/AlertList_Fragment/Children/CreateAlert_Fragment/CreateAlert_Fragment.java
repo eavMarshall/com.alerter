@@ -43,6 +43,7 @@ public class CreateAlert_Fragment<A extends BaseActivity> extends AlertFragment<
         tbm.lockNavDraw(false);
         tbm.setTitle("Create");
         setHasOptionsMenu(false);
+        setBackAsClear();
     }
 
     @Override

@@ -37,7 +37,7 @@ public class AlertList_Fragment<A extends BaseActivity> extends AlertFragment<A>
         ButtonActivityManager bam = (ButtonActivityManager) getMyActivity().getActivityManager(BaseActivity.BUTTON_MANAGER);
         ToolBarActivityManager tbm = (ToolBarActivityManager) getMyActivity().getActivityManager(BaseActivity.TOOLBAR_MANAGER);
         bam.enableFabBtn(true);
-        tbm.selectNavPosition(1);
+        tbm.selectNavPosition(0);
         tbm.lockNavDraw(false);
         tbm.setBackButton(false);
         tbm.setTitle("Alerts");

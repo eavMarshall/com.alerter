@@ -3,18 +3,13 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/frag1"
-            android:icon="@android:drawable/ic_delete"
-            android:title="frag1" />
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
         <item
-            android:id="@+id/frag2"
-            android:icon="@android:drawable/ic_delete"
-            android:title="frag2" />
-        <item
-            android:id="@+id/frag3"
-            android:icon="@android:drawable/ic_delete"
-            android:title="frag3" />
-
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings" />
     </group>
 
 </menu>

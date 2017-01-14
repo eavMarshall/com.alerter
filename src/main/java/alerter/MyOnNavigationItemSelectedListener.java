@@ -25,9 +25,8 @@ public class MyOnNavigationItemSelectedListener implements NavigationView.OnNavi
         drawer.closeDrawer(GravityCompat.START);
         FragmentActivityManager fam = (FragmentActivityManager) mainActivity.getActivityManager(BaseActivity.FRAGMENT_MANAGER);
         switch (item.getItemId()) {
-            case R.id.frag1: fam.changeFragmentTo(MyFragmentActivityManager.CREATE); break;
-            case R.id.frag2: fam.changeFragmentTo(MyFragmentActivityManager.EDIT); break;
-            case R.id.frag3: fam.changeFragmentTo(MyFragmentActivityManager.ADD); break;
+            case R.id.nav_home: fam.changeFragmentTo(MyFragmentActivityManager.LIST); break;
+            case R.id.nav_settings: fam.changeFragmentTo(MyFragmentActivityManager.SETTING); break;
         }
         return true;
     }

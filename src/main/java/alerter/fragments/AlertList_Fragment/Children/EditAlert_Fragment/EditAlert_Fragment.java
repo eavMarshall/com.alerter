@@ -42,6 +42,7 @@ public class EditAlert_Fragment<A extends BaseActivity> extends AlertFragment<A>
         tbm.lockNavDraw(false);
         tbm.setTitle("Edit");
         setHasOptionsMenu(false);
+        setBackAsBack();
     }
 
     @Override
