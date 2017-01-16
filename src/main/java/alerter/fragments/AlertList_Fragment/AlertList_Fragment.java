@@ -10,7 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import alerter.fragments.AlertFragment;
-import alerter.fragments.AlertList_Fragment.Managers.PreLoadManager;
+import alerter.fragments.AlertList_Fragment.Managers.AlertList_PreLoadManager;
 import my.alerter.R;
 
 /**
@@ -22,14 +22,14 @@ public class AlertList_Fragment<A extends BaseActivity> extends AlertFragment<A>
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreLoadManager(new PreLoadManager(this, getMyActivity()));
+        addPreLoadManager(new AlertList_PreLoadManager(this, getMyActivity()));
         //addPostManager();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return setView(inflater, container, R.layout.fragment3);
+        return setView(inflater, container, R.layout.alertlist);
     }
 
     @Override

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import alerter.MyFragmentActivityManager;
 import alerter.fragments.AlertFragment;
-import alerter.fragments.AlertList_Fragment.Managers.PreLoadManager;
 import my.alerter.R;
 
 /**
@@ -30,7 +29,7 @@ public class Setting_Fragment<A extends BaseActivity> extends AlertFragment<A> {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return setView(inflater, container, R.layout.fragment3);
+        return setView(inflater, container, R.layout.setting);
     }
 
     @Override
@@ -40,10 +39,9 @@ public class Setting_Fragment<A extends BaseActivity> extends AlertFragment<A> {
         bam.enableFabBtn(false);
         tbm.selectNavPosition(1);
         tbm.lockNavDraw(false);
-        tbm.setBackButton(true);
+        tbm.setBackButton(false);
         tbm.setTitle("Setting");
         setHasOptionsMenu(true);
-        setBackAsBack();
     }
 
     @Override

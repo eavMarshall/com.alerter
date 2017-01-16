@@ -15,10 +15,10 @@ public class MainActivity extends BaseActivity {
     @Override public NavigationView.OnNavigationItemSelectedListener getOnNavigationItemSelectedListener() {
         return new MyOnNavigationItemSelectedListener(this);
     }
-    @Override public View getLoadingLayout(LayoutInflater inflater) { return inflater.inflate(R.layout.fragment_loading_screen, null); }
+    @Override public View getLoadingLayout(LayoutInflater inflater) { return inflater.inflate(R.layout.loading, null); }
 
     public void loadManagers() {
-        addManager(FRAGMENT_MANAGER, new MyFragmentActivityManager<MainActivity>(this));
+        addManager(FRAGMENT_MANAGER, new MyFragmentActivityManager(this));
     }
 
     @Override

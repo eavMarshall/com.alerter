@@ -5,28 +5,36 @@ import android.forms.BaseActivity.Managers.ButtonActivityManager;
 import android.forms.BaseActivity.Managers.FragmentActivityManager;
 import android.forms.Fragments.Worker.Worker;
 import android.view.View;
-import android.widget.EditText;
 
 import alerter.MyFragmentActivityManager;
 import alerter.fragments.AlertList_Fragment.AlertList_Fragment;
+
 
 /**
  * @author Elliott Marshall
  */
 
-public class SetupFabBtn<A extends BaseActivity, F extends AlertList_Fragment> extends Worker<A, F> {
-    private SetupFabBtn() { super(null, null); }
-    public SetupFabBtn(A activity, F fragment) { super(activity, fragment); }
+public class FabBtnSetup_Worker<A extends BaseActivity, F extends AlertList_Fragment> extends Worker<A, F> {
+    private FabBtnSetup_Worker() {
+        super(null, null);
+    }
 
-    private EditText search;
+    public FabBtnSetup_Worker(A activity, F fragment) {
+        super(activity, fragment);
+    }
 
     @Override
     public void start() {
+        View fragView = getMyFragment().getView();
+        if (null == fragView) return;
+
         ButtonActivityManager bam = (ButtonActivityManager) getMyActivity().getActivityManager(BaseActivity.BUTTON_MANAGER);
+        if (null == bam) return;
         bam.setFabOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 FragmentActivityManager fam = (FragmentActivityManager) getMyActivity().getActivityManager(BaseActivity.FRAGMENT_MANAGER);
+                if (null == fam) return;
                 fam.changeFragmentToWithForwardAnimation(MyFragmentActivityManager.ADD);
             }
         });

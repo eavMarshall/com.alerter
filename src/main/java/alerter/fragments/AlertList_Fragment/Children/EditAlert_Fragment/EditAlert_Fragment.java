@@ -22,14 +22,14 @@ public class EditAlert_Fragment<A extends BaseActivity> extends AlertFragment<A>
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //addPreLoadManager(new SetupButtonManager(this, getMyActivity()));
+        //addPreLoadManager(new EditAlert_PreLoadManager(this, getMyActivity()));
         //addPostManager();
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return setView(inflater, container, R.layout.fragment2);
+        return setView(inflater, container, R.layout.edit);
     }
 
     @Override

@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ############################################################### -->
-    <string name="DATABASE_NAME">MySqliteDB</string>
+    <string name="DATABASE_NAME">Alerter</string>
     <integer name="DATABASE_VERSION">1</integer>
     <string-array name="CREATE_DATABASE">
         <item>\n
-            create table if not exists Comment(\n
+            create table if not exists AlertName(\n
                 id integer primary key AUTOINCREMENT,\n
-                CommentText text\n
+                Name text not null unique\n
+            )\n
+        </item>
+        <item>\n
+            create table if not exists Alarm(\n
+                id integer primary key AUTOINCREMENT,\n
+                Day int\n
+                Hour int\n
+                Min int\n
+                Sec int\n
+                Sound text\n
+                fkAlertNameID\n
             )\n
         </item>
     </string-array>
     <!-- ############################################################### -->
-    <string name="Comment">Comment</string>
+    <string name="AlertName">AlertName</string>
+    <string name="Alarm">Alarm</string>
     <string name="id">id</string>
-    <string name="CommentText">CommentText</string>
+    <string name="Name">Name</string>
+    <string name="Day">Day</string>
+    <string name="Hour">Hour</string>
+    <string name="Min">Min</string>
+    <string name="Sec">Sec</string>
+    <string name="Sound">Sound</string>
+    <string name="fkAlertNameID">fkAlertNameID</string>
     <!-- ############################################################### -->
-    <string name="findAllComment">select CommentText from Comment</string>
-    <string name="searchComment" formatted="false">select CommentText from Comment where CommentText like \'%??@p1??%\'</string>
+    <string name="findAllComment">select id, Name from AlertName</string>
+    <string name="searchComment" formatted="false">select id, Day, Hour, Min, Sec, Sound from Alarm where fkAlertNameID = ??@p1??</string>
 </resources>
