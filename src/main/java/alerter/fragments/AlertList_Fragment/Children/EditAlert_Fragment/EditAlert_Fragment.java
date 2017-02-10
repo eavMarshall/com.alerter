@@ -29,7 +29,7 @@ public class EditAlert_Fragment<A extends BaseActivity> extends AlertFragment<A>
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return setView(inflater, container, R.layout.edit);
+        return setView(inflater, container, R.layout.edit_fragment);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class EditAlert_Fragment<A extends BaseActivity> extends AlertFragment<A>
         tbm.setBackButton(false);
         tbm.selectNavPosition(1);
         tbm.lockNavDraw(false);
-        tbm.setTitle("Edit");
+        tbm.setTitle(getString(R.string.Edit));
         setHasOptionsMenu(false);
         setBackAsBack();
     }

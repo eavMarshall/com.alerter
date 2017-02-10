@@ -29,18 +29,20 @@ public class AlertList_Fragment<A extends BaseActivity> extends AlertFragment<A>
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return setView(inflater, container, R.layout.alertlist);
+        return setView(inflater, container, R.layout.alertlist_fragment);
     }
 
     @Override
     protected void loadSettings() {
         ButtonActivityManager bam = (ButtonActivityManager) getMyActivity().getActivityManager(BaseActivity.BUTTON_MANAGER);
+        if (null == bam) return;
         ToolBarActivityManager tbm = (ToolBarActivityManager) getMyActivity().getActivityManager(BaseActivity.TOOLBAR_MANAGER);
+        if (null == tbm) return;
         bam.enableFabBtn(true);
         tbm.selectNavPosition(0);
         tbm.lockNavDraw(false);
         tbm.setBackButton(false);
-        tbm.setTitle("Alerts");
+        tbm.setTitle(getString(R.string.Alerts));
         setHasOptionsMenu(true);
     }
 

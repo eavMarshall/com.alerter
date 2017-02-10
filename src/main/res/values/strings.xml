@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">Alerter</string>
+    <string name="app_name" translatable="false">Alerter</string>
     <string name="Error_EmptyName">Please enter some text</string>
+    <string name="Alerts">Alerts</string>
+    <string name="Edit">Edit</string>
+    <string name="Add">Add</string>
 </resources>

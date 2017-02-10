@@ -13,8 +13,4 @@ public class EditAlert_PreLoadManager<F extends BaseFragment, A extends BaseActi
     public EditAlert_PreLoadManager(F fragment, A activity) {
         super(fragment, activity);
     }
-
-    @Override
-    public void execute() {
-    }
 }

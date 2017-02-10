@@ -13,8 +13,4 @@ public class AddNewAlert_PreLoadManager<F extends BaseFragment, A extends BaseAc
     public AddNewAlert_PreLoadManager(F fragment, A activity) {
         super(fragment, activity);
     }
-
-    @Override
-    public void execute() {
-    }
 }

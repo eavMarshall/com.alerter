@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- ############################################################### -->
-    <string name="DATABASE_NAME">Alerter</string>
+    <string name="DATABASE_NAME" translatable="false">Alerter</string>
     <integer name="DATABASE_VERSION">1</integer>
     <string-array name="CREATE_DATABASE">
         <item>\n
@@ -23,17 +23,17 @@
         </item>
     </string-array>
     <!-- ############################################################### -->
-    <string name="AlertName">AlertName</string>
-    <string name="Alarm">Alarm</string>
-    <string name="id">id</string>
-    <string name="Name">Name</string>
-    <string name="Day">Day</string>
-    <string name="Hour">Hour</string>
-    <string name="Min">Min</string>
-    <string name="Sec">Sec</string>
-    <string name="Sound">Sound</string>
-    <string name="fkAlertNameID">fkAlertNameID</string>
+    <string name="AlertName" translatable="false">AlertName</string>
+    <string name="Alarm" translatable="false">Alarm</string>
+    <string name="id" translatable="false">id</string>
+    <string name="Name" translatable="false">Name</string>
+    <string name="Day" translatable="false">Day</string>
+    <string name="Hour" translatable="false">Hour</string>
+    <string name="Min" translatable="false">Min</string>
+    <string name="Sec" translatable="false">Sec</string>
+    <string name="Sound" translatable="false">Sound</string>
+    <string name="fkAlertNameID" translatable="false">fkAlertNameID</string>
     <!-- ############################################################### -->
-    <string name="findAllComment">select id, Name from AlertName</string>
-    <string name="searchComment" formatted="false">select id, Day, Hour, Min, Sec, Sound from Alarm where fkAlertNameID = ??@p1??</string>
+    <string name="findAllComment" translatable="false">select id, Name from AlertName</string>
+    <string name="searchComment" formatted="false" translatable="false">select id, Day, Hour, Min, Sec, Sound from Alarm where fkAlertNameID = ??@p1??</string>
 </resources>

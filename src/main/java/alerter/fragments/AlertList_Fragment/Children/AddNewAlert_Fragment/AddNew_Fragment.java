@@ -43,7 +43,7 @@ public class AddNew_Fragment<A extends BaseActivity> extends AlertFragment<A> {
         bam.enableFabBtn(false);
         tbm.selectNavPosition(1);
         tbm.lockNavDraw(true);
-        tbm.setTitle("Add");
+        tbm.setTitle(getString(R.string.Add));
         tbm.setBackButton(true);
         setHasOptionsMenu(true);
         setBackAsClear();
