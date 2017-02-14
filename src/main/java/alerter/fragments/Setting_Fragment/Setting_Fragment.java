@@ -40,7 +40,7 @@ public class Setting_Fragment<A extends BaseActivity> extends AlertFragment<A> {
         tbm.selectNavPosition(1);
         tbm.lockNavDraw(false);
         tbm.setBackButton(false);
-        tbm.setTitle("Setting");
+        tbm.setTitle(getString(R.string.Setting));
         setHasOptionsMenu(true);
     }
 

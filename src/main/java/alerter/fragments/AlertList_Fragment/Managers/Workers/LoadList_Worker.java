@@ -24,11 +24,6 @@ public class LoadList_Worker<A extends BaseActivity, F extends AlertList_Fragmen
 
     @Override
     public void start() {
-        View fragView = getMyFragment().getView();
-        if (null == fragView) return;
-        DataBaseManager dm = (DataBaseManager) getMyActivity().getActivityManager(BaseActivity.DATABASE_MANAGER);
-        if (null == dm) return;
-        StatementProcessor sp = dm.getDatabaseController().getStatementProcessor();
-        if (null == sp) return;
+        //getStatementProcessor().execSQLParam("", "");
     }
 }

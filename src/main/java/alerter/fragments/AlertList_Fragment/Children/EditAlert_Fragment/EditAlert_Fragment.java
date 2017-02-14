@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import alerter.MyFragmentActivityManager;
 import alerter.fragments.AlertFragment;
+import alerter.fragments.AlertList_Fragment.Children.EditAlert_Fragment.Managers.EditAlert_PreLoadManager;
 import my.alerter.R;
 
 /**
@@ -22,7 +23,7 @@ public class EditAlert_Fragment<A extends BaseActivity> extends AlertFragment<A>
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //addPreLoadManager(new EditAlert_PreLoadManager(this, getMyActivity()));
+        addPreLoadManager(new EditAlert_PreLoadManager(this, getMyActivity()));
         //addPostManager();
     }
 

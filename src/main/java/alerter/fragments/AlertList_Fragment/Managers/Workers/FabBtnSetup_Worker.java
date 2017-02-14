@@ -25,9 +25,6 @@ public class FabBtnSetup_Worker<A extends BaseActivity, F extends AlertList_Frag
 
     @Override
     public void start() {
-        View fragView = getMyFragment().getView();
-        if (null == fragView) return;
-
         ButtonActivityManager bam = (ButtonActivityManager) getMyActivity().getActivityManager(BaseActivity.BUTTON_MANAGER);
         if (null == bam) return;
         bam.setFabOnClickListener(new View.OnClickListener() {

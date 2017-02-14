@@ -18,7 +18,7 @@ public class MyOnNavigationItemSelectedListener implements NavigationView.OnNavi
     public MyOnNavigationItemSelectedListener(BaseActivity mainActivity) {
         this.mainActivity = mainActivity;
     }
-    @SuppressWarnings("StatementWithEmptyBody")
+
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         DrawerLayout drawer = (DrawerLayout) mainActivity.findViewById(android.forms.R.id.drawer_layout);

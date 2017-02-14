@@ -30,20 +30,12 @@ public class Save_Worker<A extends BaseActivity, F extends AddNew_Fragment> exte
 
     @Override
     public void start() {
-        View fragView = getMyFragment().getView();
-        if (null == fragView) return;
-
         FragmentActivityManager fam = (FragmentActivityManager) getMyActivity().getActivityManager(BaseActivity.FRAGMENT_MANAGER);
         if (null == fam) return;
-
         PopupActivityManager pam = (PopupActivityManager) getMyActivity().getActivityManager(BaseActivity.POPUP_MANAGER);
         if (null == pam) return;
 
-        DataBaseManager dbm = (DataBaseManager) getMyActivity().getActivityManager(BaseActivity.DATABASE_MANAGER);
-        if (null == dbm) return;
-
-        StatementProcessor sp = dbm.getDatabaseController().getStatementProcessor();
-        EditText addText = (EditText) getMyFragment().getView().findViewById(R.id.addtext);
+        EditText addText = (EditText) getFragView().findViewById(R.id.addtext);
         if (null == addText) return;
 
         if (addText.getText().toString().equals("")) {
@@ -51,7 +43,7 @@ public class Save_Worker<A extends BaseActivity, F extends AddNew_Fragment> exte
         } else {
             ContentValues cv = new ContentValues();
             cv.put(getString(R.string.Name), addText.getText().toString());
-            sp.insert(cv, getString(R.string.AlertName));
+            getStatementProcessor().insert(cv, getString(R.string.AlertName));
             fam.changeFragmentToWithForwardAnimation(MyFragmentActivityManager.LIST);
         }
     }
