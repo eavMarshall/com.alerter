@@ -39,7 +39,9 @@ public class AddNew_Fragment<A extends BaseActivity> extends AlertFragment<A> {
     @Override
     protected void loadSettings() {
         ButtonActivityManager bam = (ButtonActivityManager) getMyActivity().getActivityManager(BaseActivity.BUTTON_MANAGER);
+        if (null == bam) return;
         ToolBarActivityManager tbm = (ToolBarActivityManager) getMyActivity().getActivityManager(BaseActivity.TOOLBAR_MANAGER);
+        if (null == tbm) return;
         bam.enableFabBtn(false);
         tbm.selectNavPosition(1);
         tbm.lockNavDraw(true);

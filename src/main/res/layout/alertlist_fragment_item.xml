@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.elliott.database.Components.UpdateLayout.TextViewUpdater
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:drawable/list_selector_background"
+    android:paddingTop="@dimen/layout_padding"
+    android:paddingBottom="@dimen/layout_padding">
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Name"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/layout_padding"/>
+    <TextView
+        android:id="@+id/Count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_weight="2"
+        android:textAlignment="center"
+        android:layout_marginRight="@dimen/layout_padding"/>
+    <android.forms.Components.TextViews.DateTextView
+        android:id="@+id/Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:layout_weight="1.7"
+        android:textAlignment="center"
+        android:layout_marginRight="@dimen/layout_padding"/>
+</android.elliott.database.Components.UpdateLayout.TextViewUpdater>

@@ -13,12 +13,22 @@
         <item>\n
             create table if not exists Alarm(\n
                 id integer primary key AUTOINCREMENT,\n
-                Day int\n
-                Hour int\n
-                Min int\n
-                Sec int\n
-                Sound text\n
-                fkAlertNameID\n
+                WeekDay int,\n
+                Hour int,\n
+                Min int,\n
+                Repeat int,\n
+                Active int,\n
+                Comment text,\n
+                fkAlertNameID not null\n
+            )\n
+        </item>
+        <item>\n
+            create table if not exists Alert(\n
+                id integer primary key AUTOINCREMENT,\n
+                Type int not null,\n
+                Address text not null,\n
+                Response text not null,\n
+                fkAlarmID int not null\n
             )\n
         </item>
     </string-array>

@@ -1,12 +1,12 @@
 package alerter.fragments.AlertList_Fragment.Managers.Workers;
 
-import android.elliott.database.Components.StatementProcessor;
+import android.elliott.database.Components.DataSet.DataSet;
+import android.elliott.database.Components.ListViewUpdater.ListViewUpdater;
 import android.forms.BaseActivity.BaseActivity;
-import android.forms.BaseActivity.Managers.DataBaseManager;
 import android.forms.Fragments.Worker.Worker;
-import android.view.View;
 
 import alerter.fragments.AlertList_Fragment.AlertList_Fragment;
+import my.alerter.R;
 
 
 /**
@@ -24,6 +24,8 @@ public class LoadList_Worker<A extends BaseActivity, F extends AlertList_Fragmen
 
     @Override
     public void start() {
-        //getStatementProcessor().execSQLParam("", "");
+        DataSet dataSet = getStatementProcessor().rawQuery(getString(R.string.getAllAlerts));
+        ListViewUpdater alertList = (ListViewUpdater) getFragView().findViewById(R.id.alert_list);
+        alertList.setDataSet(dataSet, R.layout.alertlist_fragment_item);
     }
 }

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="getAllAlerts" translatable="false">\n
+        select\n
+            an.id,\n
+            an.Name,\n
+            (select count(*) from Alarm a where a.fkAlertNameID = an.id and a.Active = 1) [Count],\n
+            (select max(Date) from Alarm a where a.fkAlertNameID = an.id and a.Active = 1) [Date]\n
+        from AlertName an\n
+    </string>
+</resources>
